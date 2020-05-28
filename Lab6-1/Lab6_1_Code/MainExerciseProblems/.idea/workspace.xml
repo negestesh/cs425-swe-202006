@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6c5e7908-7769-4d8f-aaaa-fe8c2ab4f041" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cW1qV9GCYjqrMGaYABouYBnoLF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="randomness.ArraySettingsConfigurable" />
+  </component>
+  <component name="RunManager" selected="Application.FurtherCodingPracticeProblems">
+    <configuration name="FurtherCodingPracticeProblems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.mum.cs.cs425.demos.studentrecorsmgmtapp.FurtherCodingPracticeProblems" />
+      <module name="Exercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.mum.cs.cs425.demos.studentrecorsmgmtapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyStudentRecordsMgmtApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.mum.cs.cs425.demos.studentrecorsmgmtapp.MyStudentRecordsMgmtApp" />
+      <module name="Exercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.mum.cs.cs425.demos.studentrecorsmgmtapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FurtherCodingPracticeProblems" />
+        <item itemvalue="Application.MyStudentRecordsMgmtApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c5e7908-7769-4d8f-aaaa-fe8c2ab4f041" name="Default Changelist" comment="" />
+      <created>1590629725195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590629725195</updated>
+      <workItem from="1590629728592" duration="7043000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1368" y="178" key="#Inspections" timestamp="1590630005342">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="178" key="#Inspections/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590630005342" />
+    <state x="-1368" y="178" key="#Notifications" timestamp="1590632297115">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="178" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590632297115" />
+    <state x="-1368" y="178" width="1302" height="684" key="#Plugins" timestamp="1590632838731">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="178" width="1302" height="684" key="#Plugins/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590632838731" />
+    <state x="-1155" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1590630155763">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1155" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590630155763" />
+    <state width="1877" height="326" key="GridCell.Tab.0.bottom" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state width="1877" height="326" key="GridCell.Tab.0.center" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state width="1877" height="326" key="GridCell.Tab.0.left" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state width="1877" height="326" key="GridCell.Tab.0.right" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state width="1877" height="326" key="GridCell.Tab.1.center" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state width="1877" height="326" key="GridCell.Tab.1.left" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state width="1877" height="326" key="GridCell.Tab.1.right" timestamp="1590636780474">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590636780474" />
+    <state x="-1459" y="162" key="SettingsEditor" timestamp="1590632935977">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590632935977" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590632826002">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590632826002" />
+  </component>
+</project>
