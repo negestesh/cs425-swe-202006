@@ -16,15 +16,17 @@ public class FurtherCodingPracticeProblems {
 
     public static void printHelloWorld(int[] numbers) {
         for (int number : numbers) {
-            if (number % 5 == 0) {
-                System.out.println("Hello");
-            }
-            if (number % 7 == 0) {
-                System.out.println("World");
-            }
             if (number % 5 == 0 && number % 7 == 0) {
                 System.out.println("HelloWorld");
+            } else {
+                if (number % 5 == 0) {
+                    System.out.println("Hello");
+                }
+                if (number % 7 == 0) {
+                    System.out.println("World");
+                }
             }
+
         }
     }
 
@@ -37,7 +39,7 @@ public class FurtherCodingPracticeProblems {
                 lastFirstBiggest = firstBiggest;
                 firstBiggest = numbers[i];
             }
-            if (lastFirstBiggest!=firstBiggest){
+            if (lastFirstBiggest != firstBiggest) {
                 secondBiggest = lastFirstBiggest;
             }
             if (numbers[i - 1] > secondBiggest && numbers[i - 1] < firstBiggest) {
