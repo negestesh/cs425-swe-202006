@@ -2,6 +2,7 @@ package edu.miu.cs.cs425.studentmgmt.mystudentmgmtapp.model;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.stream.LongStream;
 
 @Entity
 public class Classroom {
@@ -16,7 +17,7 @@ public class Classroom {
     @Column(name = "room_number", nullable = false)
     private String roomNumber;
 
-    @OneToMany(mappedBy = "classroom")
+    @OneToMany(mappedBy = "classroom", cascade = CascadeType.PERSIST)
      List<Student> students;
 
     public Classroom() {
