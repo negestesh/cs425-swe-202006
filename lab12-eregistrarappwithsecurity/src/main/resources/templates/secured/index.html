@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +20,8 @@
         <h3 style="text-align: center">Welcome to the E-Registrar App</h3>
         <hr/>
         <div style="font-size: 1em">
-            To browse and manage <a href="/eregistrarwebapp/students/list">List of Students</a> or
-            <a href="/eregistrarwebapp/students/register">to register
+            To browse and manage <a href="/eregistrarwebapp/public/list">List of Students</a> or
+            <a href="/eregistrarwebapp/secured/admin/register">to register
                 a new student</a>, please first make sure to read the
             instructions and key points provided below. And then click the
             appropriate menu item, located on the menu-bar above.<br/><br/>
@@ -34,6 +35,9 @@
             the release of Letraset sheets containing Lorem Ipsum passages, and
             more recently with desktop publishing software like Aldus PageMaker
             including versions of Lorem Ipsum.
+
+            <p sec:authorize="isAnonymous()">Already have access as a Member, Librarian or System Administrator? Then, simply <a href="/eregistrarwebapp/public/login">Sign-In.</a>
+                to access the full range of services available to you, based on your role and access rights.</p>
         </div>
     </th:block>
 </div>

@@ -1,11 +1,12 @@
 /* -- main-styles.css -- */
 @charset "utf-8";
 html {
+    position: relative;
     min-height: 100%;
 }
 
 body {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 footer {

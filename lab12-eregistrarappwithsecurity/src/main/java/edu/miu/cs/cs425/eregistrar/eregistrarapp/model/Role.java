@@ -27,6 +27,9 @@ public class Role {
         this.roleId = roleId;
         this.name = name;
     }
+    public Role( String name){
+        this.name = name;
+    }
 
 
     public Integer getRoleId() {

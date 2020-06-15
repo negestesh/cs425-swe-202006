@@ -8,7 +8,8 @@
     <meta name="author" content="O. Kalu">
     <link rel="icon" href="favicon.ico">
     <title>E-RegistrarApp - List of students</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
@@ -18,14 +19,15 @@
     <div>
         <span style="font-size: 1.5em">List of Students</span>
         <span style="float:right;">
-                    <a class="btn btn-outline-primary btn-lg" href="/eregistrarwebapp/students/register">Register a New Student</a>
+                    <a class="btn btn-outline-primary btn-lg" href="/eregistrarwebapp/secured/admin/register">Register a New Student</a>
                 </span>
     </div>
-    <form id="searchBookForm" method="get" action="/eregistrarwebapp/students/search">
+    <form id="searchBookForm" method="get" action="/eregistrarwebapp/secured/admin/search">
         <div style="margin-top:1em;" class="row">
             <div class="col-md-12">
                 <div class="input-group">
-                    <input type="text" class="form-control" id="searchString" name="searchString" placeholder="Enter a string to search for books" th:value="${searchString}" autofocus />
+                    <input type="text" class="form-control" id="searchString" name="searchString"
+                           placeholder="Enter a text to search for students" th:value="${searchString}" autofocus/>
                     <div class="input-group-append">
                         <button id="btnSubmit" type="submit" class="btn btn-outline-success">Search</button>
                     </div>
@@ -58,8 +60,11 @@
             <td th:text="${student.cgpa}"></td>
             <td th:text="${student.enrollmentDate}"></td>
             <td th:text="${student.isInternational}"></td>
-            <td><a th:href="@{'/eregistrarwebapp/students/edit/{studentId}'(studentId=${student.studentId})}">Edit</a></td>
-            <td><a th:href="@{'/eregistrarwebapp/students/delete/{studentId}'(studentId=${student.studentId})}">Delete</a></td>
+            <td>
+                <a th:href="@{'/eregistrarwebapp/secured/admin/edit/{studentId}'(studentId=${student.studentId})}">Edit</a>
+            </td>
+            <td><a th:href="@{'/eregistrarwebapp/secured/admin/delete/{studentId}'(studentId=${student.studentId})}">Delete</a>
+            </td>
         </tr>
         </tbody>
     </table>
@@ -67,9 +72,15 @@
 
 <div th:replace="fragments/footer :: footer"></div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>

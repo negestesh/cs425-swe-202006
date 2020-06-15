@@ -22,65 +22,65 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping(value = "/eregistrarwebapp/students/list")
+    @GetMapping(value = "/eregistrarwebapp/secured/admin/list")
     public ModelAndView listStudents(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("students", studentService.getAllStudents());
-        modelAndView.setViewName("students/list");
+        modelAndView.setViewName("secured/admin/list");
         return modelAndView;
     }
 
-    @GetMapping(value = "/eregistrarwebapp/students/register")
+    @GetMapping(value = "/eregistrarwebapp/secured/admin/register")
     public String displayRegisterStudentForm(Model model){
         Student student = new Student();
         model.addAttribute("student", student);
-        return "students/register";
+        return "/secured/admin/register";
     }
 
-    @PostMapping(value = "/eregistrarwebapp/students/register")
+    @PostMapping(value = "/eregistrarwebapp/secured/admin/register")
     public String addNewStudent(@Valid @ModelAttribute(value = "student") Student student, BindingResult bindingResult, Model model){
        if (bindingResult.hasErrors()){
            model.addAttribute("student",student);
            model.addAttribute("errors", bindingResult.getAllErrors());
-           return "students/register";
+           return "secured/admin/register";
        }
        studentService.saveStudent(student);
-       return "redirect:/eregistrarwebapp/students/list";
+       return "redirect:/eregistrarwebapp/secured/admin/list";
     }
 
-    @GetMapping(value = "/eregistrarwebapp/students/edit/{studentId}")
+    @GetMapping(value = "/eregistrarwebapp/secured/admin/edit/{studentId}")
     public String editStudent(@PathVariable Integer studentId, Model model){
         Student student = studentService.getStudentById(studentId);
         if (student!=null){
             model.addAttribute("student", student);
-            return "students/edit";
+            return "/secured/admin/edit";
         }
-        return "students/list";
+        return "/secured/admin/list";
     }
-    @PostMapping(value = "/eregistrarwebapp/students/edit")
+    @PostMapping(value = "/eregistrarwebapp/secured/admin/edit")
     public String updateBook(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){
             model.addAttribute("errors", bindingResult.getAllErrors());
-            return "students/edit";
+            return "/secured/admin/edit";
         }
         studentService.saveStudent(student);
-        return "redirect:/eregistrarwebapp/students/list";
+        return "redirect:/eregistrarwebapp/secured/admin/list";
     }
 
-    @GetMapping(value = "/eregistrarwebapp/students/delete/{studentId}")
+    @GetMapping(value = "/eregistrarwebapp/secured/admin/delete/{studentId}")
     public String deleteStudent(@PathVariable Integer studentId, Model model){
         studentService.deleteStudentById(studentId);
-        return "redirect:/eregistrarwebapp/students/list";
+        return "redirect:/eregistrarwebapp/secured/admin/list";
     }
 
-    @GetMapping(value = {"/eregistrarwebapp/students/search", "/students/search"})
+    @GetMapping(value = {"/eregistrarwebapp/secured/admin/search", "secured/admin/search"})
     public ModelAndView searchBooks(@RequestParam String searchString){
         ModelAndView modelAndView = new ModelAndView();
         List<Student> students = studentService.searchStudents(searchString);
         modelAndView.addObject("students", students);
         modelAndView.addObject("searchString", searchString);
         modelAndView.addObject("studentsCount",students.size());
-        modelAndView.setViewName("students/list");
+        modelAndView.setViewName("/secured/admin/list");
         return modelAndView;
     }
 

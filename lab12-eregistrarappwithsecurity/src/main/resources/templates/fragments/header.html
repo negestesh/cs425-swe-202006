@@ -1,6 +1,7 @@
-<header xmlns:th="http://www.thymeleaf.org" th:fragment="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a style="padding-right: 2em;" class="navbar-brand" href="/eregistrarwebapp/home">E-Registration : : : The Online Registration System</a>
+<header xmlns:th="http://www.thymeleaf.org" th:fragment="header"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" xmlns="http://www.w3.org/1999/html">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a style="padding-right: 2em;" class="navbar-brand" href="/eregistrarwebapp/public/home">E-Registration : : : The Online Registration System</a>
         <!--<span style="color: #ffffff;"> &nbsp; | &nbsp;</span>-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,17 +9,22 @@
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
-                    <a class="nav-link" href="/eregistrarwebapp/students/list">Students</a>
+                <li sec:authorize="isAuthenticated()" class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
+                    <a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link" href="/eregistrarwebapp/secured/admin/list">Students</a>
+                    <a sec:authorize="hasRole('ROLE_STUDENT')" class="nav-link" href="/eregistrarwebapp/secured/students/list">Students</a>
                 </li>
-                <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em;">
-                    <a class="nav-link" href="/eregistrarwebapp/students/register">Register a Student</a>
+                <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item" style="border-left: white 1px solid; padding-left: 2em;">
+                    <a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link" href="/eregistrarwebapp/secured/admin/register" style="padding-right: 2em;">Register a Student</a>
+                </li>
+                <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em;" >
+                    <a class ="nav-link" href = "/eregistrarwebapp/public/about">About</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <span style="color: #ffffff;">Welcome,&nbsp;</span>
-                <a style="color: #ffffff; margin-right: 1em;" href="#">Guest</a>
-                <a href="#" class="btn btn-secondary">Sign In</a>
+                <span sec:authorize="isAnonymous()" style="color:#fff;padding-left: 2em; padding-right: 1em;">Welcome, Guest</span>
+                <span sec:authorize="isAuthenticated()"  style="color:#fff;padding-left: 0em; padding-right: 0.5em;">Welcome, </span><span sec:authorize="isAuthenticated()" style="color:#fff;padding-left: 0em; padding-right: 0.5em;" sec:authentication="principal.username"></span>
+                <a sec:authorize="isAnonymous()" href="/eregistrarwebapp/public/login" class="btn btn-secondary">Sign In</a>
+                <a sec:authorize="isAuthenticated()" href="/eregistrarwebapp/public/logout" class="btn btn-secondary">Sign Out</a>
             </form>
         </div>
     </nav>
