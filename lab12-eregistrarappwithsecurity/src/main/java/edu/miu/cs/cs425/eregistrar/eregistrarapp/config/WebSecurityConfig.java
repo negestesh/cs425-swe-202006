@@ -38,19 +38,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
         http
                 .headers()
                 .frameOptions().sameOrigin()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/resources/static/**", "/images/**", "/css/**", "/eregistrarwebapp/public/**", "/eregistrarwebapp/secured/admin/**").permitAll()
+                .antMatchers("/resources/static/**", "/images/**", "/css/**", "/eregistrarwebapp/public/**").permitAll()
                 .antMatchers("/eregistrarwebapp/secured/admin/**").hasRole("ADMIN")
                 .antMatchers("/eregistrarwebapp/secured/students/**").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/eregistrarwebapp/public/login")
-                .defaultSuccessUrl("/eregistrarwebapp/secured/index")
+                .defaultSuccessUrl("/eregistrarwebapp/secured/homepage")
                 .failureUrl("/eregistrarwebapp/public/login?error")
                 .permitAll()
                 .and()
@@ -60,5 +61,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .exceptionHandling();
+
     }
 }

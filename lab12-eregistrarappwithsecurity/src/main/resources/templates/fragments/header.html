@@ -11,7 +11,7 @@
             <ul class="navbar-nav mr-auto">
                 <li sec:authorize="isAuthenticated()" class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
                     <a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link" href="/eregistrarwebapp/secured/admin/list">Students</a>
-                    <a sec:authorize="hasRole('ROLE_STUDENT')" class="nav-link" href="/eregistrarwebapp/secured/students/list">Students</a>
+                    <a sec:authorize="hasRole('ROLE_USER')" class="nav-link" href="/eregistrarwebapp/secured/students/list">Students</a>
                 </li>
                 <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item" style="border-left: white 1px solid; padding-left: 2em;">
                     <a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link" href="/eregistrarwebapp/secured/admin/register" style="padding-right: 2em;">Register a Student</a>

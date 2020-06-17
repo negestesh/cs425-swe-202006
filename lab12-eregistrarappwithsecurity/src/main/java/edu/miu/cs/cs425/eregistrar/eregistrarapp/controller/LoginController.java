@@ -12,9 +12,14 @@ public class LoginController {
         return "public/login";
     }
 
-    @PostMapping(value = {"/public/login","/eregistrarwebapp/public/login", "/eregistrarwebapp/public/logout"})
-    public String success(){
-        return "redirect:/secured/homepage";
+    @PostMapping(value = "/eregistrarwebapp/public/logout")
+    public String logout(){
+        return "redirect:/public/home";
     }
+
+//    @PostMapping(value = {"/public/login","/eregistrarwebapp/public/login"})
+//    public String success(){
+//        return "redirect:eregistrarwebapp/secured/homepage";
+//    }
 
 }

@@ -17,7 +17,7 @@ public class HomepageController {
         this.studentService = studentService;
     }
 
-    @GetMapping(value = {"/", "/index", "/home", "/eregistrarwebapp/public/home"})
+    @GetMapping(value = {"/", "/index", "/home", "/eregistrarwebapp/public/home", "public/home"})
     public String showHomepage() {
         return "public/index";
     }
@@ -35,13 +35,11 @@ public class HomepageController {
         modelAndView.setViewName("public/list");
         return modelAndView;
     }
-    @PostMapping(value = "/eregistrarwebapp/public/login")
-    public String loggedIn(){return "/secured/index";}
 
 
-    @GetMapping(value = "/secured/homepage")
+    @GetMapping(value = "/eregistrarwebapp/secured/homepage")
     public String showHomeLoggedIn(){
-        return "/secured/index";
+        return "secured/index";
     }
 
 //    @GetMapping(value = "/secured/student/homepage")
