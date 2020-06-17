@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,8 @@
         <h3 style="text-align: center">Welcome to the E-Registrar App</h3>
         <hr/>
         <div style="font-size: 1em">
-            To browse and manage <a href="/eregistrarwebapp/public/list">List of Students</a> or
-            <a href="/eregistrarwebapp/students/register">to register
+            To browse <a href="/eregistrarwebapp/public/list">List of Students</a>
+            <a sec:authorize= "hasRole('ROLE_ADMIN')"  href="/eregistrarwebapp/secured/admin/register"> or to register
                 a new student</a>, please first make sure to read the
             instructions and key points provided below. And then click the
             appropriate menu item, located on the menu-bar above.<br/><br/>
